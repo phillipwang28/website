@@ -6,58 +6,107 @@
     <title>Phillip Lewis Wang</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #1e1e2f;
             color: white;
-            padding: 20px;
+            padding: 40px 20px;
+            text-align: center;
         }
-        section {
-            padding: 20px;
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #ccc;
         }
         .container {
             max-width: 800px;
-            margin: auto;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #1e1e2f;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #1e1e2f;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 40px;
         }
         a {
             color: #007BFF;
             text-decoration: none;
         }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Phillip Wang</h1>
-        <p>Electrical Engineer | Software Developer | AI Enthusiast</p>
+        <h1>Phillip Lewis Wang</h1>
+        <p>Electrical Engineer · Software Developer · AI Enthusiast</p>
     </header>
-    
-    <section class="container" id="about">
-        <h2>About Me</h2>
-        <p>Welcome to my portfolio! I'm an EECS major at UC Berkeley with a passion for AI, embedded systems, and finance.</p>
-    </section>
-    
-    <section class="container" id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="#">AI Violin Project</a></li>
-            <li><a href="#">Parachute Deployment System</a></li>
-        </ul>
-    </section>
-    
-    <section class="container" id="resume">
-        <h2>Resume</h2>
-        <p><a href="#">Download My Resume (PDF)</a></p>
-    </section>
-    
-    <section class="container" id="contact">
-        <h2>Contact</h2>
-        <p>Email: phillipwang28@berkeley.edu</p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/phillip-wang-a63623101/</a></p>
-        <p>GitHub: <a href="#">github.com/phillipwang28</a></p>
-    </section>
+
+    <div class="container">
+        <img src="picofme.JPG" alt="Phillip Wang" class="profile-pic">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hey! I'm a Regents' and Chancellor's Scholar studying Electrical Engineering and Computer Science at UC Berkeley. I am passionate about learning new things and solving problems. I created this website to keep track of my engineering journey through my personal projects.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">🎻 AI Violin Project</a></li>
+                <li><a href="#">🚀 Parachute Deployment System</a></li>
+            </ul>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <p><a href="Phillip Lewis Wang Resume.pdf" download>📄 Download My Resume (PDF)</a></p>
+            
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>📧 Email: <a href="mailto:phillipwang28@berkeley.edu">phillipwang28@berkeley.edu</a></p>
+            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/phillip-wang-a63623101/" target="_blank">linkedin.com/in/phillip-wang-a63623101/</a></p>
+            <p>💻 GitHub: <a href="https://github.com/phillipwang28" target="_blank">github.com/phillipwang28</a></p>
+
+        </section>
+    </div> 
+
+    <footer>
+        © 2025 Phillip Wang. All rights reserved.
+    </footer>
 </body>
 </html>
