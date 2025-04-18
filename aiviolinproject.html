@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Violin Tutor Project | Phillip Lewis Wang</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .project-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .project-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .component-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .component-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .component-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .component-description {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #2980b9;
+        }
+
+        .project-status {
+            background-color: #f1c40f;
+            color: #333;
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-goals {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .project-goals h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .project-goals ul {
+            padding-left: 1.5rem;
+        }
+
+        .project-goals li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Phillip Lewis Wang</h1>
+        <p>Electrical Engineer · Software Developer</p>
+    </header>
+
+    <div class="container">
+        <div class="project-header">
+            <h2>AI Violin Tutor Project</h2>
+            <span class="project-status">In Development</span>
+        </div>
+
+        <div class="project-image-container">
+            <img src="violin-project-placeholder.jpg" alt="AI Violin Tutor Concept" class="project-image">
+            <!-- Replace with actual image when available -->
+        </div>
+
+        <section>
+            <h3>Project Overview</h3>
+            <p>The AI Violin Tutor is an ambitious project that combines hardware sensors, embedded systems, and machine learning to create a tool that provides real-time feedback to violin players. As both an electrical engineer and an avid violinist, I'm developing this system to help players improve their technique by monitoring aspects like bow angle, pressure, speed, and position.</p>
+            
+            <p>The system uses multiple sensors to capture precise movements and audio characteristics, processes this data through a Raspberry Pi Pico microcontroller, and delivers instant feedback through visual displays and audio cues. It will also be able to act as a voice-activated metronome.</p>
+        </section>
+
+        <div class="project-goals">
+            <h3>Project Goals</h3>
+            <ul>
+                <li>Track bow speed and movement in 3D space with high precision</li>
+                <li>Analyze bow pressure and contact point on the string</li>
+                <li>Monitor hand and finger positions</li>
+                <li>Detect pitch accuracy and intonation</li>
+                <li>Provide real-time feedback through visual and audio cues</li>
+                <li>Record practice sessions for later review</li>
+                <li>Develop a companion app for progress tracking</li>
+            </ul>
+        </div>
+
+        <section>
+            <h3>Hardware Components</h3>
+            <div class="component-grid">
+                <div class="component-card">
+                    <div class="component-name">MPU6050</div>
+                    <p class="component-description">Tracks bow angle, speed, and motion across 3 axes with its integrated accelerometer and gyroscope. This data helps analyze bow technique and movement patterns.</p>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-name">MAX4466 Microphone</div>
+                    <p class="component-description">Captures audio signal for pitch detection, dynamics analysis, and onset detection. This allows the system to evaluate sound quality and intonation accuracy.</p>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-name">Speaker (8 Ohm)</div>
+                    <p class="component-description">Delivers audio feedback such as beeps or cues when technique needs adjustment. This allows the player to receive feedback without looking at the display. Also may act as metronome.</p>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-name">Raspberry Pi Pico</div>
+                    <p class="component-description">The main microcontroller unit that processes sensor data in real-time, implements sensor fusion algorithms, and manages the feedback loop.</p>
+                </div>
+
+                <div class="component-card">
+                    <div class="component-name">AA Batteries + Charger</div>
+                    <p class="component-description">Provides portable power for the entire system, allowing for practice anywhere without being tethered to an outlet.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Development Stages</h3>
+            <ol>
+                <li><strong>Sensor Integration:</strong> Setting up and calibrating the MPU6050 and MAX4466 to accurately track bow movement and audio</li>
+                <li><strong>Algorithm Development:</strong> Creating algorithms to analyze bow technique and provide actionable feedback</li>
+                <li><strong>Feedback System:</strong> Implementing visual and audio feedback mechanisms through the LCD display and speaker</li>
+                <li><strong>Enclosure Design:</strong> Designing a non-intrusive mount that attaches to the violin or bow</li>
+                <li><strong>Testing & Refinement:</strong> Testing with different skill levels and refining the algorithms based on feedback</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Future Enhancements</h3>
+            <p>As the project evolves, I plan to incorporate these advanced features:</p>
+            <ul>
+                <li>Machine learning algorithms to personalize feedback based on player progress</li>
+                <li>Reference sheet music to see that playing corresponds with sheet music</li>
+                <li>Bluetooth connectivity for smartphone app integration</li>
+                <li>Additional sensors for more comprehensive technique analysis</li>
+            </ul>
+        </section>
+
+        <a href="index.html" class="back-button">← Back to Projects</a>
+    </div>
+
+    <footer>
+        <p>© 2025 Phillip Wang. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Use</a>
+            <a href="#" class="footer-link">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
