@@ -3,71 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phillip Lewis Wang</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        header {
-            background-color: #1e1e2f;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #ccc;
-        }
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #1e1e2f;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #1e1e2f;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        ul li {
-            margin: 10px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9em;
-        }
-    </style>
+    <title>Phillip Lewis Wang | Electrical Engineer & Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -76,37 +15,72 @@
     </header>
 
     <div class="container">
-        <img src="picofme.JPG" alt="Phillip Wang" class="profile-pic">
+        <div class="profile-pic-container">
+            <img src="picofme.JPG" alt="Phillip Wang" class="profile-pic">
+        </div>
+        
         <section id="about">
             <h2>About Me</h2>
-            <p>Hey! I'm a Regents' and Chancellor's Scholar studying Electrical Engineering and Computer Science at UC Berkeley. I am passionate about learning new things and solving problems. I created this website to keep track of my engineering journey through my personal projects.</p>
+            <p>Hey! I'm a Regents' and Chancellor's Scholar studying Electrical Engineering and Computer Science at UC Berkeley. I am passionate about learning new things and solving problems. I created this website to keep track of my engineering journey through my personal projects-- it's a work in progress!</p>
+            
+            <div class="skills-container">
+                <span class="skill-tag">Electrical Engineering</span>
+                <span class="skill-tag">Embedded Systems</span>
+                <span class="skill-tag">Software Development</span>
+                <span class="skill-tag">Problem Solving</span>
+                <span class="skill-tag">Chemical Engineering</span>
+            </div>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li><a href="#">🎻 AI Violin Project</a></li>
-                <li><a href="#">🚀 Parachute Deployment System</a></li>
+            <ul class="projects-list">
+                <li class="project-item">
+                    <a href="https://engineering.uci.edu/news/2024/5/uci-s-chem-e-car-wins-2024-western-regional-competition#:~:text=May%202%2C%202024%20%E2%80%93%20UC%20Irvine's,by%20a%20chemical%20energy%20source." target="_blank">
+                        <span class="project-title">🏆 1st Place at Chem-E Car Western Regionals!</span>
+                    </a>
+                    <p class="project-description">Led a team to victory in the prestigious chemical engineering competition as Electrical sub-team lead</p>
+                </li>
+                <li class="project-item">
+                    <a href="#">
+                        <span class="project-title">🚀 UCI Rocket Project: Avionics Engineer</span>
+                    </a>
+                    <p class="project-description">Designed and implemented PCB to read telemetry data an automated parachute deployment system for high-altitude applications.</p>
+                </li>
             </ul>
+            <a href="#" class="button">View All Projects</a>
         </section>
 
         <section id="resume">
             <h2>Resume</h2>
-            <p><a href="Phillip Lewis Wang Resume.pdf" download>📄 Download My Resume (PDF)</a></p>
-            
+            <p>Check out my professional experience and qualifications:</p>
+            <a href="Phillip Lewis Wang Resume.pdf" download class="button">📄 Download My Resume (PDF)</a>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>📧 Email: <a href="mailto:phillipwang28@berkeley.edu">phillipwang28@berkeley.edu</a></p>
-            <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/phillip-wang-a63623101/" target="_blank">linkedin.com/in/phillip-wang-a63623101/</a></p>
-            <p>💻 GitHub: <a href="https://github.com/phillipwang28" target="_blank">github.com/phillipwang28</a></p>
-
+            <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span>Email: <a href="mailto:phillipwang28@berkeley.edu">phillipwang28@berkeley.edu</a></span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">🔗</span>
+                <span>LinkedIn: <a href="https://www.linkedin.com/in/phillip-wang-a63623101/" target="_blank">linkedin.com/in/phillip-wang-a63623101/</a></span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">💻</span>
+                <span>GitHub: <a href="https://github.com/phillipwang28" target="_blank">github.com/phillipwang28</a></span>
+            </div>
         </section>
     </div> 
 
     <footer>
-        © 2025 Phillip Wang. All rights reserved.
+        <p>© 2025 Phillip Wang. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms of Use</a>
+            <a href="#" class="footer-link">Contact</a>
+        </div>
     </footer>
 </body>
 </html>
