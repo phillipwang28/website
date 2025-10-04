@@ -21,7 +21,7 @@
         
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a Regents' and Chancellor's Scholar studying Electrical Engineering and Computer Science at UC Berkeley. I am passionate about problem solving and I am insatiably curious about learning new things. I created this website to keep track of my engineering journey through my personal projects-- it is a work in progress! I'm currently working on an AI violin tutor project that will incorporate sensors to give live feedback to violin playing. Outside of academia and engineering, I play the violin avidly, and love to play sports such as basketball and volleyball.</p>
+            <p>I am a Regents' and Chancellor's Scholar studying Electrical Engineering and Computer Science at UC Berkeley. I am interested in circuit design and semiconductor manufacturing.</p>
             
             <div class="skills-container">
                 <span class="skill-tag">Electrical Engineering</span>
@@ -35,22 +35,35 @@
             <h2>Projects</h2>
             <ul class="projects-list">
                 <li class="project-item">
+                    <a href="#">
+                        <span class="project-title">🎸 Analog Guitar Treble Booster</span>
+                    </a>
+                    <p class="project-description">
+                        Designed and built a treble booster circuit to enhance guitar tone by amplifying high-frequency harmonics.
+                        Utilized op-amp-based active filters to achieve a gain of ~10× in the 3 kHz–15 kHz range. Tuned component values to emphasize clarity and bite in solos while reducing low-frequency muddiness.
+                    </p>
+
+                    <!-- PDF Embed -->
+                    <div class="pdf-container">
+                        <iframe src="treblebooster.pdf" width="100%" height="500px" style="border: none;"></iframe>
+                    </div>
+
+                    <!-- Optional button for viewing/downloading -->
+                    <a href="treblebooster.pdf" target="_blank" class="button">📑 View Full Slides (PDF)</a>
+                </li>
+
+                <li class="project-item">
                     <a href="https://engineering.uci.edu/news/2024/5/uci-s-chem-e-car-wins-2024-western-regional-competition#:~:text=May%202%2C%202024%20%E2%80%93%20UC%20Irvine's,by%20a%20chemical%20energy%20source." target="_blank">
                         <span class="project-title">🏆 1st Place at Chem-E Car Western Regionals!</span>
                     </a>
                     <p class="project-description">Led a team to victory in the prestigious chemical engineering competition as Electrical sub-team lead</p>
                 </li>
-                <li class="project-item">
-                    <a href="aiviolinproject.html">
-                        <span class="project-title">🎻 AI Violin Tutor</span>
-                    </a>
-                    <p class="project-description">Developing an intelligent system using sensors and machine learning to provide real-time feedback for violin players, helping improve technique and performance.</p>
-                </li>
+
                 <li class="project-item">
                     <a href="#">
                         <span class="project-title">🚀 UCI Rocket Project: Avionics Engineer</span>
                     </a>
-                    <p class="project-description">Designed and implemented PCB to read telemetry data an automated parachute deployment system for high-altitude applications.</p>
+                    <p class="project-description">Designed and implemented PCB to read telemetry data and automated parachute deployment system for high-altitude applications.</p>
                 </li>
             </ul>
             <a href="#" class="button">View All Projects</a>
