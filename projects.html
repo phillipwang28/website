@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Phillip Lewis Wang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <p>Selected hardware, software, and embedded systems work.</p>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="gameboy">
+            <h2>Gameboy Project</h2>
+            <p class="project-description">
+                Programmed games (Snake, Skyfall) in Arduino IDE with Raspberry Pi Pico, buttons, and ST7789 240x320 TFT Display. 
+                Currently in the process of designing a 3D printed case for the device, will be soldering components onto a perfboard
+                with a Battery Management System IC, Class-D Amplifier, and Speaker to make the device more portable and enjoyable.
+                Will also add MicroSD IC to allow for more complex games.  
+            </p>
+        </section>
+
+        <section id="CS61CPU">
+            <h2>CPU Project</h2>
+            <p class="project-description">
+                Designed a 32-bit pipelined RISC-V CPU in Logisim with ALU, register file, immediate generator, and control logic, 
+                with a 2-stage IF/EX pipeline supporting arithmetic, branches, loads/stores, and jumps, plus branch/jump flushing 
+                for control hazards. 
+            </p>
+        </section>
+        
+        <section id="treblebooster">
+            <h2>🎸 Analog Guitar Treble Booster</h2>
+            <p class="project-description">
+                Designed and built a treble booster circuit to enhance guitar tone by amplifying high-frequency harmonics.
+                Utilized op-amp-based active filters to achieve a gain of ~10× in the 3 kHz–15 kHz range. Tuned component
+                values to emphasize clarity and bite in solos while reducing low-frequency muddiness.
+            </p>
+
+            <div class="pdf-container">
+                <iframe src="treblebooster.pdf" width="100%" height="500px" style="border: none;"></iframe>
+            </div>
+
+            <a href="treblebooster.pdf" target="_blank" class="button">📑 View Full Slides (PDF)</a>
+        </section>
+
+        <section id="cheme-car">
+            <h2>🏆 Chem-E Car Western Regionals – 1st Place</h2>
+            <p class="project-description">
+                Led the electrical sub-team for a chemically powered autonomous vehicle, responsible for sensor integration and control logic. Collaborated closely with chemical and mechanical sub-teams to ensure reliable
+                operation and precise stopping distance.
+            </p>
+            <p>
+                Read more about the competition here:
+                <a href="https://engineering.uci.edu/news/2024/5/uci-s-chem-e-car-wins-2024-western-regional-competition#:~:text=May%202%2C%202024%20%E2%80%93%20UC%20Irvine's,by%20a%20chemical%20energy%20source."
+                   target="_blank">
+                    UCI Chem-E Car Wins 2024 Western Regional Competition
+                </a>.
+            </p>
+        </section>
+
+        <section id="rocket">
+            <h2>🚀 UCI Rocket Project – Avionics Engineer</h2>
+            <p class="project-description">
+                Designed and implemented an avionics PCB to collect telemetry and automate parachute deployment for high-altitude rockets.
+                Integrated microcontrollers, sensors, and MOSFET-driven e-matches to control deployment events based on altitude and flight conditions.
+            </p>
+        </section>
+
+        <!-- Add more future projects here -->
+    </div>
+
+    <footer>
+        <p>© 2025 Phillip Wang. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html" class="footer-link">Privacy Policy</a>
+            <a href="terms.html" class="footer-link">Terms of Use</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
