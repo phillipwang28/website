@@ -1,4 +1,4 @@
-/* Base styles */
+/* ========== Base ========== */
 * {
   box-sizing: border-box;
 }
@@ -23,81 +23,117 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Top navigation bar */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #ffffff;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
-}
-
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.brand h1 {
-  font-size: 1.4rem;
-  margin: 0;
-}
-
-.brand p {
-  margin: 0.1rem 0 0;
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.25rem;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.13em;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #6b7280;
-}
-
-.nav-links a:hover {
-  color: #111827;
-}
-
-.nav-links .nav-active {
-  color: #111827;
-}
-
-/* Layout */
-.container {
+/* ========== Shell Layout ========== */
+.page-shell {
   max-width: 960px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 3rem;
 }
 
-.profile-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 2.5rem;
+/* ========== Header / Nav (USED ON ALL PAGES) ========== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(249, 250, 251, 0.9); /* subtle translucent */
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  backdrop-filter: blur(10px);
 }
 
-@media (max-width: 768px) {
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand */
+.brand-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.brand-tagline {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Nav links */
+.nav {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.25rem 0;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 2px;
+  background: #111827;
+  transition: width 0.18s ease;
+}
+
+.nav-link:hover {
+  color: #111827;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Active page */
+.nav-link--active {
+  color: #111827;
+  font-weight: 500;
+}
+
+.nav-link--active::after {
+  width: 100%;
+}
+
+/* Mobile tweaks */
+@media (max-width: 720px) {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
   }
+  .nav {
+    flex-wrap: wrap;
+  }
+}
+
+/* ========== Index / About Layout ========== */
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 800px) {
   .profile-layout {
     grid-template-columns: 1fr;
   }
 }
 
-/* Profile / About */
 .profile-pic-container {
   display: flex;
   justify-content: center;
@@ -111,12 +147,14 @@ a:hover {
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
 }
 
-.about-section h2 {
+.about-section h2,
+.page-section h2 {
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
 }
 
-.about-section p {
+.about-section p,
+.page-section p {
   line-height: 1.6;
   color: #374151;
 }
@@ -177,12 +215,7 @@ a:hover {
   gap: 0.75rem;
 }
 
-/* Generic page sections (Now, Music, etc.) */
-.page-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.5rem;
-}
-
+/* ========== Generic page sections (Now, Music, etc.) ========== */
 .section-intro {
   color: #4b5563;
   margin-bottom: 1.5rem;
@@ -232,7 +265,7 @@ a:hover {
   color: #4b5563;
 }
 
-/* Footer */
+/* ========== Footer ========== */
 footer {
   border-top: 1px solid rgba(148, 163, 184, 0.4);
   padding: 1.25rem 1.5rem;
