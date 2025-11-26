@@ -3,101 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phillip Lewis Wang | Electrical Engineer & Developer</title>
+    <title>Phillip Lewis Wang | About</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Phillip Lewis Wang</h1>
-        <p>Electrical Engineer · Software Developer</p>
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <h1>Phillip Lewis Wang</h1>
+                <p>Electrical Engineer · Software Developer</p>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-active">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="now.html">Now</a>
+                <a href="music.html">Music</a>
+                <a href="resume.html">Resume</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="profile-pic-container">
-            <img src="picofme.JPG" alt="Phillip Wang" class="profile-pic">
-        </div>
-        
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a Regents' and Chancellor's Scholar studying Electrical Engineering and Computer Science at UC Berkeley. I am interested in circuit design and semiconductor manufacturing.</p>
+    <main class="container">
+        <div class="profile-layout">
+            <div class="profile-pic-container">
+                <img src="picofme.JPG" alt="Phillip Wang" class="profile-pic">
+            </div>
             
-            <div class="skills-container">
-                <span class="skill-tag">Electrical Engineering</span>
-                <span class="skill-tag">Embedded Systems</span>
-                <span class="skill-tag">Software Development</span>
-                <span class="skill-tag">Problem Solving</span>
-            </div>
-        </section>
+            <section id="about" class="about-section">
+                <h2>About Me</h2>
+                <p>
+                    I am a Regents' and Chancellor's Scholar studying Electrical Engineering and Computer Science at UC Berkeley. 
+                    I’m particularly interested in circuit design, embedded systems, and semiconductor manufacturing. I am currently
+                    working on building a NES emulator. See "Now" section for more details!
+                </p>
+                <p>
+                    I enjoy building things that sit at the intersection of hardware and software: from mixed-signal circuits and 
+                    embedded firmware to tools that make complex systems more understandable and robust.
+                </p>
+                
+                <div class="skills-container">
+                    <span class="skill-tag">Electrical Engineering</span>
+                    <span class="skill-tag">Embedded Systems</span>
+                    <span class="skill-tag">Semiconductor Devices</span>
+                    <span class="skill-tag">Software Development</span>
+                    <span class="skill-tag">Problem Solving</span>
+                </div>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul class="projects-list">
-                <li class="project-item">
-                    <a href="projects.html#treblebooster">
-                        <span class="project-title">🎸 Analog Guitar Treble Booster</span>
-                    </a>
-                    <p class="project-description">
-                        Designed and built a treble booster circuit to enhance guitar tone by amplifying high-frequency harmonics.
-                        Utilized op-amp-based active filters to achieve a gain of ~10× in the 3 kHz–15 kHz range. Tuned component values to emphasize clarity and bite in solos while reducing low-frequency muddiness.
-                    </p>
-
-                    <!-- PDF Embed -->
-                    <div class="pdf-container">
-                        <iframe src="treblebooster.pdf" width="100%" height="500px" style="border: none;"></iframe>
-                    </div>
-
-                    <!-- Optional button for viewing/downloading -->
-                    <a href="treblebooster.pdf" target="_blank" class="button">📑 View Full Slides (PDF)</a>
-                </li>
-
-                <li class="project-item">
-                    <a href="https://engineering.uci.edu/news/2024/5/uci-s-chem-e-car-wins-2024-western-regional-competition#:~:text=May%202%2C%202024%20%E2%80%93%20UC%20Irvine's,by%20a%20chemical%20energy%20source." target="_blank">
-                        <span class="project-title">🏆 1st Place at Chem-E Car Western Regionals!</span>
-                    </a>
-                    <p class="project-description">Led a team to victory in the prestigious chemical engineering competition as Electrical sub-team lead</p>
-                </li>
-
-                <li class="project-item">
-                    <a href="projects.html#rocket">
-                        <span class="project-title">🚀 UCI Rocket Project: Avionics Engineer</span>
-                    </a>
-                    <p class="project-description">Designed and implemented PCB to read telemetry data and automated parachute deployment system for high-altitude applications.</p>
-                </li>
-            </ul>
-            <a href="projects.html" class="button">View All Projects</a>
-        </section>
-
-        <section id="resume">
-            <h2>Resume</h2>
-            <p>Check out my professional experience and qualifications:</p>
-            <a href="resume.html" class="button">📄 View My Resume</a>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-item">
-                <span class="contact-icon">📧</span>
-                <span>Email: <a href="mailto:phillipwang28@berkeley.edu">phillipwang28@berkeley.edu</a></span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">🔗</span>
-                <span>LinkedIn: <a href="https://www.linkedin.com/in/phillip-wang-a63623101/" target="_blank">linkedin.com/in/phillip-wang-a63623101/</a></span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">💻</span>
-                <span>GitHub: <a href="https://github.com/phillipwang28" target="_blank">github.com/phillipwang28</a></span>
-            </div>
-        </section>
-    </div> 
+                <div class="about-links">
+                    <a href="projects.html" class="button subtle-button">View Projects</a>
+                    <a href="resume.html" class="button subtle-button">View Resume</a>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <footer>
         <p>© 2025 Phillip Wang. All rights reserved.</p>
         <div class="footer-links">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms of Use</a>
-            <a href="#contact" class="footer-link">Contact</a>
+            <a href="mailto:phillipwang28@berkeley.edu" class="footer-link">Email</a>
+            <a href="https://www.linkedin.com/in/phillip-wang-a63623101/" target="_blank" class="footer-link">LinkedIn</a>
+            <a href="https://github.com/phillipwang28" target="_blank" class="footer-link">GitHub</a>
         </div>
     </footer>
 </body>
